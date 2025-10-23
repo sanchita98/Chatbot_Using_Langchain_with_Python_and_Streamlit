@@ -13,21 +13,21 @@ Think of it as **ChatGPT meets your PDF library**.
 
 ## 🔍 Why This Project
 
-^ Tired of scrolling PDFs for key information?
+1 Tired of scrolling PDFs for key information?
 
-^ Want a dynamic Q&A experience with your documents?
+2 Want a dynamic Q&A experience with your documents?
 
-^ Need persistent chat sessions to continue your research?
+3 Need persistent chat sessions to continue your research?
 
-^ This project solves all of that with:
+4 This project solves all of that with:
 
-^ RAG (Retrieval-Augmented Generation)
+5 RAG (Retrieval-Augmented Generation)
 
-^ FAISS vector storage
+6 FAISS vector storage
 
-^ HuggingFace embeddings
+7 HuggingFace embeddings
 
-^ Streamlit-based interactive UI
+8 Streamlit-based interactive UI
 
 
 ## How It Works 
@@ -45,15 +45,15 @@ Think of it as **ChatGPT meets your PDF library**.
 
 ## Project Layout 
 
-*app.py -> Streamlit UI & main app
+app.py -> Streamlit UI & main app
 
-*rag_pipeline.py -> RAGlogic(retrieval + prompt construction)
+rag_pipeline.py -> RAGlogic(retrieval + prompt construction)
 
-*vectorstore_manager.py -> FAISS & embeddings 
+vectorstore_manager.py -> FAISS & embeddings 
 
-*chat_OpenAI.py / chat_Gemini.py -> LLM wrappers
+chat_OpenAI.py  -> LLM wrappers
 
-*requirements.txt -> Python Dependencies 
+requirements.txt -> Python Dependencies 
 
 
 
@@ -71,10 +71,7 @@ pip install -r requirements.txt
 
 Create a .env file in project root:
 
-
 OPENAI_API_KEY=your_api_key
-# or
-GEMINI_API_KEY=your_api_key
 
 ###  Run the App
 
