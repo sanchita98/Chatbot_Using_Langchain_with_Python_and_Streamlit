@@ -1,0 +1,13 @@
+# Python cache and virtual environment
+__pycache__/
+*.pyc
+venv/
+.env
+
+# FAISS and cache files
+faiss_cache/
+*.pkl
+
+# Jupyter and system files
+.ipynb_checkpoints/
+.DS_Store
