@@ -1,0 +1,12 @@
+KEY FEATURES 
+
+
+Universal File Handling: Seamlessly ingest and process files across formats: PDF, DOCX, XLSX, TXT, CSV, and PPTX.
+
+Knowledge Persistence: Organize and preserve previous Q&A sessions with persistent chat history and customizable session names in the sidebar.
+
+Grounded Accuracy: Answers are strictly constrained by the uploaded text. If information is unavailable, the assistant clearly states the context and infers only when appropriate.
+
+Real-Time Indexing: The Vector Store automatically indexes new documents on upload, ensuring your knowledge base is always up-to-date without manual configuration.
+
+Intuitive Interface: A clean, modern Streamlit UI featuring a Desert Bloom (Light Mode) theme for enhanced readability and user experience.

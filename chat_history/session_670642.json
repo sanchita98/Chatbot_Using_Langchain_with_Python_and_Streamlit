@@ -1,0 +1,10 @@
+[
+  {
+    "role": "user",
+    "content": "give me the key features of this app "
+  },
+  {
+    "role": "assistant",
+    "content": "Here are the key features of this app:\n\n*   **Universal File Handling:** Ingests and processes files across formats including PDF, DOCX, XLSX, TXT, CSV, and PPTX.\n*   **Knowledge Persistence:** Organizes and preserves previous Q&A sessions with persistent chat history and customizable session names in the sidebar.\n*   **Grounded Accuracy:** Answers are strictly constrained by the uploaded text; if information is unavailable, the assistant clearly states the context and infers only when appropriate.\n*   **Real-Time Indexing:** The Vector Store automatically indexes new documents on upload, ensuring the knowledge base is always up-to-date without manual configuration.\n*   **Intuitive Interface:** A clean, modern Streamlit UI featuring a Desert Bloom (Light Mode) theme for enhanced readability and user experience."
+  }
+]
