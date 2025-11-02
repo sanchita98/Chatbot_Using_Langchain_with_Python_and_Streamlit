@@ -1,31 +1,45 @@
-📚 AskMyDocsAI: The Universal Document RAG Assistant
+# 📚 AskMyDocsAI: The Universal Document RAG Assistant
 
-Unlock the knowledge in your files. A powerful, multi-format AI chat solution for instantaneous, grounded answers.
+**Unlock the knowledge in your files.**  
+A powerful, multi-format AI chat solution for instantaneous, grounded answers.
 
 ![alt text](image-1.png)
 
-✨ Project Summary
+---
 
-AskMyDocsAI transforms scattered business and academic documents into a single, interactive knowledge base. This application leverages Retrieval-Augmented Generation (RAG) to provide highly accurate, context-bound responses from any combination of supported files.
+## ✨ Project Summary
 
-It's not just a PDF reader—it's your AI research assistant, designed for efficiency, clarity, and precision, powered by the Gemini LLM.
+**AskMyDocsAI** transforms scattered business and academic documents into a single, interactive knowledge base.  
+This application leverages **Retrieval-Augmented Generation (RAG)** to provide highly accurate, context-bound responses from any combination of supported files.
 
-🚀 Key Capabilities
+It’s not just a PDF reader — it’s your **AI research assistant**, designed for **efficiency, clarity, and precision**, powered by the **Gemini LLM**.
 
-Universal File Handling: Seamlessly ingest and process files across formats: PDF, DOCX, XLSX, TXT, CSV, and PPTX.
+---
 
-Knowledge Persistence: Organize and preserve previous Q&A sessions with persistent chat history and customizable session names in the sidebar.
+## 🚀 Key Capabilities
 
-Grounded Accuracy: Answers are strictly constrained by the uploaded text. If information is unavailable, the assistant clearly states the context and infers only when appropriate.
+- **Universal File Handling:**  
+  Seamlessly ingest and process files across formats — PDF, DOCX, XLSX, TXT, CSV, and PPTX.
 
-Real-Time Indexing: The Vector Store automatically indexes new documents on upload, ensuring your knowledge base is always up-to-date without manual configuration.
+- **Knowledge Persistence:**  
+  Organize and preserve previous Q&A sessions with persistent chat history and customizable session names in the sidebar.
 
-Intuitive Interface: A clean, modern Streamlit UI featuring a Desert Bloom (Light Mode) theme for enhanced readability and user experience.
+- **Grounded Accuracy:**  
+  Answers are strictly constrained by the uploaded text. If information is unavailable, the assistant clearly states the context and infers only when appropriate.
 
-🏗️ Technical Architecture
+- **Real-Time Indexing:**  
+  The Vector Store automatically indexes new documents on upload, ensuring your knowledge base is always up-to-date without manual configuration.
 
-The system utilizes a classic RAG framework to ensure responses are factual and sourced directly from your documents.
+- **Intuitive Interface:**  
+  A clean, modern **Streamlit UI** featuring a *Desert Bloom (Light Mode)* theme for enhanced readability and user experience.
 
+---
+
+## 🏗️ Technical Architecture
+
+The system utilizes a **classic RAG framework** to ensure responses are factual and sourced directly from your documents.
+
+```
 ┌─────────────────────────────────────┐
 │           STREAMLIT APP             │
 │   → User interaction layer          │
@@ -43,94 +57,84 @@ The system utilizes a classic RAG framework to ensure responses are factual and 
 │   → Stores and retrieves embeddings │
 │   → Uses HuggingFace models         │
 └─────────────────────────────────────┘
+```
 
+---
 
-⚙️ Core Technology Stack
+## ⚙️ Core Technology Stack
 
-Component
+| **Component**        | **Technology**                   | **Description**                                                  |
+|-----------------------|----------------------------------|------------------------------------------------------------------|
+| **Frontend**          | Streamlit                        | Rapid development and deployment of the web interface.           |
+| **LLM Integration**   | Gemini                           | The primary large language model powering the chat.              |
+| **Document Processing** | LangChain & Unstructured        | Handles document loading, parsing, and text splitting.           |
+| **Embeddings**        | HuggingFace Sentence Transformers | Converts text chunks into numerical vectors for similarity search. |
+| **Vector Storage**    | FAISS (CPU)                      | High-performance, memory-efficient index for vector lookups.     |
+| **State Management**  | Streamlit & history_manager       | Persists user sessions, chat history, and application state.     |
 
-Technology
+---
 
-Description
+## 💾 Installation & Quick Start
 
-Frontend
-
-Streamlit
-
-Rapid development and deployment of the web interface.
-
-LLM Integration
-
-Gemini
-
-The primary large language model powering the chat.
-
-Document Processing
-
-LangChain & Unstructured
-
-Handles document loading, parsing, and text splitting for multiple file types.
-
-Embeddings
-
-HuggingFace Sentence Transformers
-
-Converts text chunks into numerical vectors for similarity search.
-
-Vector Storage
-
-FAISS (CPU)
-
-High-performance, memory-efficient index for vector lookups.
-
-State Management
-
-Streamlit & history_manager
-
-Persists user sessions, chat history, and application state.
-
-💾 Installation & Quick Start
-
-1️⃣ Environment Setup
+### 1️⃣ Environment Setup
 
 Create and activate a Python virtual environment to manage dependencies:
 
+```bash
 python -m venv venv
-source venv/bin/activate # On Mac/Linux
-# OR
-venv\Scripts\activate    # On Windows
+# Activate the environment
+source venv/bin/activate  # On Mac/Linux
+venv\Scripts\activate     # On Windows
+```
 
+---
 
-2️⃣ Install Dependencies
+### 2️⃣ Install Dependencies
 
-This project requires core RAG libraries and file-specific parsers (unstructured, python-docx, etc.) for multi-format support.
+This project requires core RAG libraries and file-specific parsers (e.g., `unstructured`, `python-docx`, etc.) for multi-format support.
 
+```bash
 pip install -r requirements.txt
+```
 
+---
 
-3️⃣ Configure API Key
+### 3️⃣ Configure API Key
 
-Create a file named .env in the project root and add your chosen LLM API key:
+Create a file named `.env` in the project root and add your Gemini API key:
 
+```bash
 GEMINI_API_KEY=your_api_key_here
+```
 
+---
 
-4️⃣ Launch the Application
+### 4️⃣ Launch the Application
 
+Run the following command:
+
+```bash
 streamlit run app.py
+```
 
+Then open your browser and navigate to:
 
+👉 **http://localhost:8501/**
 
-Open your browser and navigate to http://localhost:8501/.
+---
 
-💬 Interaction Example
+## 💬 Interaction Example
 
-The system is trained to prioritize and cite the context, providing clear boundaries on its knowledge.
+The system is trained to **prioritize and cite context**, providing clear boundaries on its knowledge.
 
 ![alt text](image-2.png)
 
-🧩 Project Structure — AskMyDocsAI
+---
 
+## 🧩 Project Structure — AskMyDocsAI
+
+```
+📂 AskMyDocsAI/
 ├── app.py                  # 🎯 Streamlit app entry point
 ├── rag_pipeline.py         # ⚙️ RAG logic (Retrieve → Prompt → Generate)
 ├── vectorstore_manager.py  # 🧠 FAISS index + Embeddings
@@ -139,4 +143,8 @@ The system is trained to prioritize and cite the context, providing clear bounda
 ├── history_manager.py      # 🗂️ Save/load conversation history
 ├── data/                   # 📁 Uploaded document storage
 └── requirements.txt        # 📦 Dependencies list
+```
 
+---
+
+⭐ **Developed with precision for seamless document-based intelligence.**
